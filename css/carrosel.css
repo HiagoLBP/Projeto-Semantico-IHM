@@ -1,0 +1,77 @@
+.section-title {
+    font-weight: 800; 
+    font-size: 3rem;
+    color: white;
+    letter-spacing: -2px; 
+    text-transform: uppercase;
+}
+
+.text-yellow {
+    color: #ECA72C;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 20px; 
+}
+
+/* CARD DO FILME */
+.movie-card {
+    position: relative;
+    border-radius: 16px; 
+    overflow: hidden; 
+    aspect-ratio: 2/3; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent; 
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.movie-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.5) 30%, transparent 60%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+/* TEXTOS DO FILME */
+.movie-info {
+    text-align: center;
+}
+
+.movie-info h3 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.movie-info span {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    border-color: #ECA72C;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
