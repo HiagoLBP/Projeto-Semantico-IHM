@@ -7,15 +7,15 @@ const scrollAmount = 300;
 
 btnRight.addEventListener('click', () => {
     container.scrollBy({
-        left: scrollAmount, // Move para a direita (positivo)
-        behavior: 'smooth'  // Movimento suave
+        left: scrollAmount, 
+        behavior: 'smooth' 
     });
 });
 
 // Evento: Clicou na seta esquerda
 btnLeft.addEventListener('click', () => {
     container.scrollBy({
-        left: -scrollAmount, // Move para a esquerda (negativo)
+        left: -scrollAmount, 
         behavior: 'smooth'
     });
 });
