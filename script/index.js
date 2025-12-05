@@ -1,21 +1,30 @@
-// Seleciona os elementos
-const container = document.querySelector('.movie-grid');
-const btnLeft = document.getElementById('leftBtn');
-const btnRight = document.getElementById('rightBtn');
+// Código gerado com auxílio de IA 
 
-const scrollAmount = 300; 
+const carousels = document.querySelectorAll('.carousel-wrapper');
 
-btnRight.addEventListener('click', () => {
-    container.scrollBy({
-        left: scrollAmount, 
-        behavior: 'smooth' 
-    });
-});
+carousels.forEach(wrapper => {
+    
+    const container = wrapper.querySelector('.movie-grid');
+    const btnLeft = wrapper.querySelector('.btn-left');
+    const btnRight = wrapper.querySelector('.btn-right');
+    const scrollAmount = 300; 
 
-// Evento: Clicou na seta esquerda
-btnLeft.addEventListener('click', () => {
-    container.scrollBy({
-        left: -scrollAmount, 
-        behavior: 'smooth'
-    });
+    if (container && btnRight && btnLeft) { 
+        
+        // Botão Direito
+        btnRight.addEventListener('click', () => {
+            container.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Botão Esquerdo
+        btnLeft.addEventListener('click', () => {
+            container.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
