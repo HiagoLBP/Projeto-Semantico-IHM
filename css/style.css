@@ -232,3 +232,19 @@ body {
     letter-spacing: 1px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
+
+
+/* Garante que a transição de opacidade seja suave */
+.hero-title, 
+.hero-subtitle {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Classe que o JS vai adicionar para esconder o texto antes de trocar */
+.hero-content.fade-out .hero-title,
+.hero-content.fade-out .hero-subtitle {
+    opacity: 0;
+    transform: translateY(20px); /* O texto desce um pouquinho ao sumir */
+}
