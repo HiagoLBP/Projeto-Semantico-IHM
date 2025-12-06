@@ -1,3 +1,6 @@
+// Código gerado com auxílio de IA 
+
+
 const cards = document.querySelectorAll('.movie-card');
 
 // 1. Lógica para ABRIR (Clique no Card)
