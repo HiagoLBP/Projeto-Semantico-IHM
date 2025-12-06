@@ -1,0 +1,141 @@
+.section-title {
+    font-weight: 800; 
+    font-size: 3rem;
+    color: white;
+    letter-spacing: -2px; 
+    text-transform: uppercase;
+}
+
+.text-yellow {
+    color: #ECA72C;
+}
+
+/* --- PÁGINA DE PLANOS --- */
+
+.plans-section {
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+/* --- ATUALIZAÇÃO DOS CARDS DE PLANOS --- */
+
+.plan-card {
+    background-color: transparent;
+    border: 1px solid #ECA72C;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+    position: relative;
+    
+    /* MUDANÇAS PARA ALINHAMENTO PERFEITO: */
+    height: 100%; /* Força todos a terem a mesma altura da coluna */
+    display: flex;
+    flex-direction: column; /* Organiza um item embaixo do outro */
+}
+
+.plan-img {
+    height: 180px; /* Mantido grande conforme solicitado */
+    width: 100%;   
+    object-fit: contain; 
+    margin-bottom: 20px;
+}
+
+/* Isso força o botão a ir sempre para o rodapé do card */
+.plan-card button {
+    margin-top: auto; 
+}
+
+/* --- TIPOGRAFIA MELHORADA (PROFISSIONAL) --- */
+
+.plan-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800; /* Mais grosso para destaque */
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.plan-card .price {
+    font-size: 2.5rem; /* Aumentei para dar destaque ao valor */
+    font-weight: 800;
+    color: #ECA72C;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 10px rgba(236, 167, 44, 0.2); /* Brilho leve */
+}
+
+/* --- LISTA DE BENEFÍCIOS (VISUAL LIMPO) --- */
+
+.plan-features {
+    list-style: none;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    
+    /* MUDANÇA PRINCIPAL: Alinhamento à Esquerda */
+    text-align: left; 
+    
+    /* Linha fina separando o preço da lista */
+    border-top: 1px solid rgba(255,255,255,0.1); 
+}
+
+.plan-features li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #e0e0e0; /* Branco gelo para não cansar a vista */
+    
+    /* Alinha o ícone (check) com o texto perfeitamente */
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+}
+
+/* Removi o código antigo do "content: '•'" pois agora usamos ícones no HTML */
+
+/* Estilo para itens desativados (riscados ou cinzas) */
+.plan-features li.disabled {
+    color: #666;
+    text-decoration: line-through; 
+}
+
+/* Destaque para palavras em negrito dentro da lista */
+.plan-features li strong {
+    color: white;
+    font-weight: 700;
+}
+
+/* --- ESTILO DO CARD "MAIS VENDIDO" (O do meio) --- */
+.plan-card.featured {
+    border: 2px solid #ECA72C; 
+    transform: scale(1.05); 
+    background-color: #1a1a1a; 
+    margin-top: -20px; 
+}
+
+/* A Faixa "MAIS VENDIDO" */
+.badge-top {
+    position: absolute;
+    top: -20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ECA72C;
+    color: #221E22;
+    padding: 10px 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); 
+    width: 80%;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    .plan-card.featured {
+        transform: none; 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .badge-top {
+        width: 60%;
+    }
+}
