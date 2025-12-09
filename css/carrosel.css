@@ -15,7 +15,6 @@
     overflow-x: auto;
     gap: 20px;
     padding: 40px 20px ;
-    
     scrollbar-width: none; 
     scroll-behavior: smooth; 
     scroll-snap-type: x mandatory;
@@ -88,6 +87,8 @@
 }
 
 /* --- CORREÇÃO DE CORTE LATERAL --- */
+/* Código gerado com auxílio de IA */
+
 .movie-card:first-child:hover {
     transform-origin: left center;
 }
@@ -116,6 +117,7 @@
     height: 50px;
     border-radius: 50%; 
     cursor: pointer;
+    /* Código abaixo gerado com auxílio de IA */
     z-index: 10; 
     transition: all 0.3s ease;
     display: flex;
@@ -164,10 +166,12 @@
 }
 
 /* --- QUANDO O CARD É CLICADO (ATIVO) --- */
+/* Código gerado com auxílio de IA */
+
 .movie-card.ativo .sinopse {
     display: flex;
     
-    /* O SEGREDO: Sai do card e vai para a tela inteira */
+    /* Sai do card e vai para a tela inteira */
     position: fixed; 
     top: 50%;
     left: 50%;
@@ -231,6 +235,7 @@
     color: #221E22;
 }
 
+/* Código gerado com auxílio de IA */
 @keyframes zoomIn {
     from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
     to { opacity: 1; transform: translate(-50%, -50%) scale(1); }

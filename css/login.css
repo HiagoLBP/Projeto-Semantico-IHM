@@ -1,0 +1,125 @@
+/* --- TELA DE LOGIN --- */
+
+.login-bg {
+    background-color: #121212; /* Fundo escuro */
+    height: 100vh; /* Ocupa a tela toda */
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Corta o que sobrar das ondas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ONDAS AMARELAS (Feitas com CSS puro) */
+.blob {
+    position: absolute;
+    background-color: #ECA72C;
+    z-index: 1; /* Fica atrás do formulário */
+}
+
+.blob-top {
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 20%; /* Deforma o círculo */
+    transform: rotate(135deg);
+}
+
+.blob-bottom {
+    bottom: -150px;
+    left: -150px;
+    width: 525px;
+    height: 600px;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(45deg);
+}
+
+/* CONTEÚDO CENTRAL */
+.login-content {
+    position: relative;
+    z-index: 2; /* Fica NA FRENTE das ondas */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do formulário */
+    padding: 20px;
+}
+
+.login-logo {
+    height: 100px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+/* CAMPOS DE TEXTO TRANSPARENTES */
+.custom-input .input-group-text {
+    background: transparent;
+    border: 1px solid white;
+    border-right: none; /* Remove a borda entre o ícone e o texto */
+    color: white;
+}
+
+.custom-input .form-control {
+    background: transparent;
+    border: 1px solid white;
+    border-left: none; /* Remove a borda entre o ícone e o texto */
+    color: white;
+}
+
+/* Cor do texto placeholder (Username/Password) */
+.custom-input .form-control::placeholder {
+    color: #ccc;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Remove o brilho azul padrão do navegador ao clicar */
+.custom-input .form-control:focus {
+    background: transparent;
+    box-shadow: none;
+    border-color: #ECA72C;
+    color: white;
+}
+.custom-input .form-control:focus + .input-group-text, 
+.custom-input .form-control:focus ~ .input-group-text { 
+    /* Pinta a borda do icone quando clica no input */
+    border-color: #ECA72C;
+}
+
+/* BOTÃO DE LOGIN */
+.btn-login {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 10px;
+    color: white;
+    background-color: #ECA72C;
+    border: none;
+    letter-spacing: 1px;
+    transition: transform 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #ffbd44;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Link Esqueci a senha */
+.forgot-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.forgot-link:hover {
+    color: #ECA72C;
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .blob-top { width: 300px; height: 300px; }
+    .blob-bottom { width: 350px; height: 350px; }
+}

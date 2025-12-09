@@ -1,16 +1,4 @@
-@media (min-width: 992px) { /* Aplica apenas em telas grandes (Desktop) */
-    
-    .navbar {
-        position: relative;
-    }
-
-    .navbar-collapse .navbar-nav {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
+/* --- CONFIGURAÇÕES GERAIS --- */
 html {
     scroll-behavior: smooth;
 }
@@ -21,19 +9,35 @@ body {
     color: #ffffff;
 }
 
-/* NAVBAR ESTILOS */
 
-.navbar img {
-    width: auto;
-    height: 70px;
+/* Código gerado com auxílio de IA */
+/* --- NAVBAR (Versão Desktop - Telas Grandes) --- */
+@media (min-width: 992px) { 
+    .navbar {
+        position: relative;
+    }
+
+    /* Centraliza o menu perfeitamente no meio da tela */
+    .navbar-collapse .navbar-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
+/* --- ESTILOS PADRÃO DA NAVBAR --- */
 .navbar {
     background-color: #221E22; 
     padding-top: 15px;    
     padding-bottom: 15px; 
     border-top: 2px solid #ECA72C;
     border-bottom: 2px solid #ECA72C;
+}
+
+.navbar img {
+    width: auto;
+    height: 70px; /* Altura padrão para PC */
+    transition: height 0.3s ease;
 }
 
 .container-fluid {
@@ -47,6 +51,7 @@ body {
     border-color: white;
 }
 
+/* Links do Menu */
 .navbar-nav .nav-link {
     color: #ffffff !important;
     font-size: 16px;
@@ -65,8 +70,61 @@ body {
 }
 
 
-/* BOTÕES ESTILOS */
+/*Código abaixo gerado com auxílio de IA */
 
+/* --- AJUSTES MOBILE (Celular/Tablet) - NOVO! --- */
+@media (max-width: 991px) {
+    
+    /* 1. Tira o padding gigante que espremia o conteúdo */
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* 2. Diminui a logo para caber no celular */
+    .navbar img {
+        height: 45px; /* Reduzido */
+    }
+
+    /* 3. Estiliza o botão Hambúrguer */
+    .navbar-toggler {
+        border-color: #ECA72C;
+        margin-right: 0;
+    }
+    
+    /* Pinta os tracinhos do menu de amarelo */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(236, 167, 44, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* 4. Ajusta o menu quando ele ABRE */
+    .navbar-collapse {
+        background-color: #221E22;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 15px;
+        z-index: 1000;
+    }
+
+    /* Reseta a posição absoluta do desktop */
+    .navbar-collapse .navbar-nav {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Centraliza os botões de ação */
+    .navbar-collapse form {
+        justify-content: center;
+    }
+}
+/* ^^^^^ Código acima gerado com auxílio de IA ^^^^^ */
+
+
+/* --- BOTÕES --- */
 .btn-custom {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -107,18 +165,7 @@ body {
     transform: translateY(-2px);
 }
 
-.footer a img {
-    width: auto;
-    height: 50px;
-}
-
-.footer nav{
-    position: absolute;
-}
-
-
-/*FOOTER POHA*/
-
+/* --- FOOTER --- */
 .site-footer {
     background-color: #0d0d0d;
     padding-top: 60px;
@@ -154,7 +201,7 @@ body {
     padding-left: 5px;
 }
 
-/* Estilo ícones sociais */
+/* Ícones sociais */
 .social-icons img {
     width: 24px;
     height: 24px;
@@ -165,10 +212,7 @@ body {
     transform: scale(1.2);
 }
 
-
-/* --- VIDEO BACKGROUND --- */
-
-
+/* --- VIDEO BACKGROUND & HERO SECTION --- */
 .hero-section {
     position: relative;
     width: 100%;
@@ -180,7 +224,13 @@ body {
     border-bottom: 2px solid #ECA72C; 
 }
 
-/* Configuração do Vídeo de Fundo */
+/* Ajuste do Hero para celular */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+}
+
 .video-background {
     position: absolute;
     top: 0;
@@ -211,6 +261,7 @@ body {
     z-index: 2; 
     padding: 20px;
     max-width: 900px; 
+    text-align: center;
 }
 
 .hero-title {
@@ -233,8 +284,15 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
+/* No celular, diminui a fonte do Hero */
+@media (max-width: 768px) {
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 0.9rem; }
+}
 
-/* Garante que a transição de opacidade seja suave */
+
+
+/* Animação do Texto */
 .hero-title, 
 .hero-subtitle {
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -242,9 +300,8 @@ body {
     transform: translateY(0);
 }
 
-/* Classe que o JS vai adicionar para esconder o texto antes de trocar */
 .hero-content.fade-out .hero-title,
 .hero-content.fade-out .hero-subtitle {
     opacity: 0;
-    transform: translateY(20px); /* O texto desce um pouquinho ao sumir */
+    transform: translateY(20px); 
 }
