@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FS Streaming - Início</title>
+    <title>FS Streaming - Registrar</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/planes.css">
     <link rel="stylesheet" href="../css/login.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -18,27 +20,25 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark"> 
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="/imgs/logo.png" alt=""></a>
+    <a class="navbar-brand" href="../index.html"><img src="../imgs/logo.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-      </span>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse w-100 justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="/index.html" style="padding: 0 15px;">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link filmes" href="#filmes" style="padding: 0 15px;">Filmes</a></li>
-        <li class="nav-item"><a class="nav-link series" href="#series" style="padding: 0 15px;">Séries</a></li>
-        <li class="nav-item"><a class="nav-link news" href="#lançamentos" style="padding: 0 15px;">Lançamentos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../index.html" style="padding: 0 15px;">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link filmes" href="../index.html#filmes" style="padding: 0 15px;">Filmes</a></li>
+        <li class="nav-item"><a class="nav-link series" href="../index.html#series" style="padding: 0 15px;">Séries</a></li>
+        <li class="nav-item"><a class="nav-link news" href="../index.html#lançamentos" style="padding: 0 15px;">Lançamentos</a></li>
         <li class="nav-item"><a class="nav-link contato" href="#contato" style="padding: 0 15px;">Contato</a></li>
       </ul>
       <form class="d-flex gap-3" role="button">
-        <a href="./pages/register.html"class="btn btn-outline-secondary btn-custom" >Registrar</a> 
-        <a href="./pages/login.html" class="btn btn-outline-secondary btn-custom">Entrar</a>
+        <a href="register.html" class="btn btn-outline-secondary btn-custom">Registrar</a> 
+        <a href="login.html" class="btn btn-outline-secondary btn-custom">Entrar</a>
     </form>
     </div>
   </div>
 </nav>  
-
 
 <section class="login-bg">
         
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="input-group mb-3 custom-input">
-                    <span class="input-group-text"><i class="bi bi"><img src="/icons/source/email.png" alt=""></i></span>
+                    <span class="input-group-text"><i class="bi bi"><img src="../icons/source/email.png" alt="" style="width: 20px;"></i></span>
                     <input type="text" class="form-control" placeholder="EMAIL">
                 </div>
 
@@ -82,26 +82,25 @@
         </div>
     </section>
 
-
 <footer class="site-footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4 d-flex flex-column align-items-center text-center">
                 <div class="footer-brand mb-3">
-                    <img src="/imgs/logo.png" alt="FS Streaming" class="footer-logo img-fluid">
+                    <img src="../imgs/logo.png" alt="FS Streaming" class="footer-logo img-fluid">
                 </div>
                 <p class="text-white mb-3">support@fs.com</p>
                 <div class="social-icons d-flex gap-3 justify-content-center">
-                    <a href="https://facebook.com" target="_blank"><img src="/icons/Vector-1.svg" alt="Facebook"></a>
-                    <a href="https://mail.google.com" target="_blank"><img src="/icons/gmail_groups.svg" alt="Gmail"></a>
-                    <a href="https://instagram.com" target="_blank"><img src="/icons/Vector.svg" alt="Instagram"></a>
+                    <a href="https://facebook.com" target="_blank"><img src="../icons/Vector-1.svg" alt="Facebook"></a>
+                    <a href="https://mail.google.com" target="_blank"><img src="../icons/gmail_groups.svg" alt="Gmail"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="../icons/Vector.svg" alt="Instagram"></a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4" id="contato">
                 <h5 class="footer-title">Conheça-nos</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#">Sobre Nós (Quem Somos)</a></li>
+                    <li><a href="../index.html">Sobre Nós (Quem Somos)</a></li>
                     <li><a href="planes.html">Planos e Preços</a></li>
                     <li><a href="#">Blogs & Notícias</a></li>
                 </ul>
@@ -132,6 +131,6 @@
     </div>
 </footer>
 
-<script src="/script/index.js"></script>
+<script src="../script/index.js"></script>
 </body>
 </html>
