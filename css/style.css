@@ -5,12 +5,15 @@ html {
 }
 
 /* Define a fonte padrão, a cor de fundo e a cor do texto para todo o site. */
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #121212;
     color: #ffffff;
 }
 
+
+/* Código gerado com auxilio de IA */
 /* --- NAVBAR (Versão Desktop - Telas Grandes) --- */
 /* Aplica estas regras apenas em telas com 992px de largura ou mais. */
 @media (min-width: 992px) { 
@@ -65,6 +68,9 @@ body {
     box-shadow: 0 4px 10px rgba(236, 167, 44, 0.3); /* Sombra amarela. */
 }
 
+
+
+/* Código gerado com auxilio de IA */
 /* --- AJUSTES MOBILE (Celular/Tablet) --- */
 /* Aplica estas regras apenas em telas com largura máxima de 991px. */
 @media (max-width: 991px) {
@@ -86,6 +92,8 @@ body {
         margin-right: 0;
     }
     
+
+    /* Código gerado com auxilio de IA */
     /* Pinta os três traços do ícone "hambúrguer" de amarelo usando um SVG embutido. */
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(236, 167, 44, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
@@ -295,12 +303,16 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
+
+/* Código gerado com auxilio de IA */
 /* Diminui o tamanho das fontes do hero em telas menores. */
 @media (max-width: 768px) {
     .hero-title { font-size: 1.8rem; }
     .hero-subtitle { font-size: 0.9rem; }
 }
 
+
+/* Código gerado com auxilio de IA */
 /* Animação de fade-out para o texto do hero (controlada via JS). */
 /* Quando a classe 'fade-out' é adicionada ao .hero-content, o texto desaparece suavemente. */
 .hero-content.fade-out .hero-title,

@@ -120,6 +120,9 @@
     margin-top: -20px; /* Sobe um pouco o card para criar sobreposição. */
 }
 
+
+
+/* Código gerado com auxilio de IA */
 /* A Faixa/Selo "MAIS VENDIDO" no topo do card em destaque. */
 .badge-top {
     position: absolute;
@@ -136,6 +139,9 @@
     width: 80%;
 }
 
+
+
+/* Código gerado com auxilio de IA */
 /* Responsividade para celular */
 @media (max-width: 768px) {
     /* Em telas menores, o card em destaque não fica maior, para não quebrar o layout.

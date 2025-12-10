@@ -20,6 +20,8 @@
     z-index: 1; /* Ficam atrás do formulário de login. */
 }
 
+
+/* Código gerado com auxilio de IA */
 /* A onda que fica no canto superior direito. */
 .blob-top {
     top: -100px;
@@ -31,6 +33,8 @@
     transform: rotate(135deg); /* Gira a forma para um ângulo mais interessante. */
 }
 
+
+/* Código gerado com auxilio de IA */
 /* A onda que fica no canto inferior esquerdo. */
 .blob-bottom {
     bottom: -150px;
@@ -90,6 +94,9 @@
     border-color: #ECA72C; /* Muda a cor da borda para amarelo. */
     color: white;
 }
+
+
+/* Código gerado com auxilio de IA */
 /* Muda a cor da borda do ícone para amarelo quando o campo de texto ao lado está focado. */
 .custom-input .form-control:focus + .input-group-text, 
 .custom-input .form-control:focus ~ .input-group-text { 
@@ -131,6 +138,9 @@
     opacity: 1; /* Remove a transparência. */
 }
 
+
+
+/* Código gerado com auxilio de IA */
 /* Responsividade: Ajustes para telas menores. */
 @media (max-width: 768px) {
     /* Diminui o tamanho das ondas decorativas em telas de celular. */

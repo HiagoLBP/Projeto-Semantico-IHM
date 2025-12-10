@@ -1,3 +1,7 @@
+/* Código gerado com auxilio de IA */
+
+
+
 // Seleciona todos os elementos com a classe 'movie-card'
 const cards = document.querySelectorAll('.movie-card');
 

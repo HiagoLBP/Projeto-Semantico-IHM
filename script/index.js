@@ -1,3 +1,7 @@
+/* Código gerado com auxilio de IA */
+
+
+
 // --- LÓGICA DO CARROSSEL DE FILMES/SÉRIES ---
 // Seleciona todos os carrosséis da página.
 const carousels = document.querySelectorAll('.carousel-wrapper');
