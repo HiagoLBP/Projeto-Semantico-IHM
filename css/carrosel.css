@@ -1,3 +1,4 @@
+/* Estiliza o título principal de uma seção, como "Lançamentos" ou "Séries em Alta". */
 .section-title {
     font-weight: 800; 
     font-size: 3rem;
@@ -6,95 +7,105 @@
     text-transform: uppercase;
 }
 
+/* Classe de utilidade para aplicar a cor amarela padrão a qualquer elemento de texto. */
 .text-yellow {
     color: #ECA72C;
 }
 
+/* Container principal do carrossel que organiza os filmes em uma linha horizontal. */
 .movie-grid {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 40px 20px ;
-    scrollbar-width: none; 
-    scroll-behavior: smooth; 
-    scroll-snap-type: x mandatory;
+    display: flex; /* Alinha os filmes lado a lado. */
+    overflow-x: auto; /* Permite rolar horizontalmente se os filmes ultrapassarem a tela. */
+    gap: 20px; /* Espaço entre cada filme. */
+    padding: 40px 20px ; /* Espaçamento interno para não colar nas bordas da seção. */
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox. */
+    scroll-behavior: smooth; /* Anima a rolagem ao usar os botões ou links. */
+    scroll-snap-type: x mandatory; /* Faz a rolagem "travar" em cada filme. */
 }
 
+/* Esconde a barra de rolagem em navegadores baseados em WebKit (Chrome, Safari, Edge). */
 .movie-grid::-webkit-scrollbar {
     height: 0px; 
     background: transparent; 
 }
 
-/* CARD DO FILME */
+/* CARD DO FILME: Estiliza o container de cada filme individualmente. */
 .movie-card {
-    position: relative;
-    border-radius: 16px; 
-    overflow: hidden; 
-    aspect-ratio: 2/3; 
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent; 
-    min-width: 200px;
-    scroll-snap-align: start;
+    position: relative; /* Necessário para posicionar o overlay de texto. */
+    border-radius: 16px; /* Bordas arredondadas. */
+    overflow: hidden; /* Esconde qualquer conteúdo que saia do card (importante para o overlay). */
+    aspect-ratio: 2/3; /* Proporção de imagem de pôster (largura/altura). */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para o efeito hover. */
+    border: 2px solid transparent; /* Borda transparente para evitar que o layout "pule" no hover. */
+    min-width: 200px; /* Largura mínima para cada card. */
+    scroll-snap-align: start; /* Alinha o início do card com o início da viewport ao rolar. */
 }
 
+/* Garante que a imagem do pôster preencha todo o espaço do card. */
 .movie-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    display: block;
+    object-fit: cover; /* Redimensiona a imagem para cobrir o card sem distorcer. */
+    display: block; /* Remove espaços extras que a imagem possa ter. */
 }
 
+/* Camada escura sobre a imagem para dar contraste e legibilidade ao texto. */
 .movie-overlay {
-    position: absolute;
+    position: absolute; /* Posiciona o overlay sobre a imagem do card. */
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Gradiente que começa escuro na base e fica transparente no topo. */
     background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.5) 30%, transparent 60%);
     
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column; /* Organiza o conteúdo em coluna. */
+    justify-content: flex-end; /* Alinha o texto na parte inferior do overlay. */
     padding: 20px;
 }
 
-/* TEXTOS DO FILME */
+/* TEXTOS DO FILME: Container para o título e outras informações no card. */
 .movie-info {
     text-align: center;
 }
 
+/* Estiliza o título (h3) do filme dentro do card. */
 .movie-info h3 {
     color: white;
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
     margin-bottom: 5px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Sombra para destacar o texto. */
 }
 
+/* Estiliza informações secundárias (como ano ou gênero) no card. */
 .movie-info span {
     color: #ffffff;
     font-size: 0.8rem;
     font-weight: 400;
 }
 
+/* Efeito ao passar o mouse sobre o card. */
 .movie-card:hover {
-    transform: scale(1.05);
-    z-index: 2;
-    border-color: #ECA72C;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transform: scale(1.05); /* Aumenta o tamanho do card. */
+    z-index: 2; /* Coloca o card na frente dos outros ao seu lado. */
+    border-color: #ECA72C; /* Mostra a borda amarela. */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Adiciona uma sombra para dar profundidade. */
 }
 
 /* --- CORREÇÃO DE CORTE LATERAL --- */
-/* Código gerado com auxílio de IA */
-
+/* Estas regras ajustam a origem da animação de zoom para os cards do início e do fim,
+   evitando que a animação seja cortada pela borda da tela. */
 .movie-card:first-child:hover {
     transform-origin: left center;
 }
 .movie-card:last-child:hover {
     transform-origin: right center;
 }
+/* Adiciona uma margem extra no início e no fim do carrossel para melhor visualização. */
 .movie-card:first-child {
     margin-left: 15px;
 }
@@ -105,54 +116,58 @@
 
 
 /* --- ESTILO DOS BOTÕES DO CARROSSEL --- */
-
+/* Estilo base para os botões de seta (scroll). */
 .scroll-btn {
-    position: absolute;
+    position: absolute; /* Posiciona os botões em relação ao container do carrossel. */
     top: 50%; 
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Centraliza verticalmente. */
     background-color: rgba(0, 0, 0, 0.7); 
     color: white;
     border: none;
     width: 50px;
     height: 50px;
-    border-radius: 50%; 
+    border-radius: 50%; /* Deixa o botão redondo. */
     cursor: pointer;
-    /* Código abaixo gerado com auxílio de IA */
-    z-index: 10; 
-    transition: all 0.3s ease;
+    z-index: 10; /* Garante que os botões fiquem sobre os cards. */
+    transition: all 0.3s ease; /* Animação suave para hover e opacidade. */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    opacity: 0; 
+    opacity: 0; /* Começa invisível. */
 }
 
+/* Torna os botões visíveis quando o mouse está sobre a área do carrossel. */
 .carousel-wrapper:hover .scroll-btn {
     opacity: 1;
 }
 
+/* Efeito ao passar o mouse sobre um botão de seta. */
 .scroll-btn:hover {
     background-color: #ECA72C; 
     color: #221E22;
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.1); /* Aumenta ligeiramente de tamanho. */
 }
 
+/* Posiciona o botão de rolagem da esquerda. */
 .btn-left {
     left: -25px; 
 }
 
+/* Posiciona o botão de rolagem da direita. */
 .btn-right {
     right: -25px; 
 }
 
+/* Em telas pequenas (como celulares), esconde os botões de seta, pois a rolagem é feita pelo toque. */
 @media (max-width: 768px) {
     .scroll-btn { display: none; }
 }
 
 /* --- ESTILO DA SINOPSE (POP-UP CENTRAL) --- */
-
+/* Container da sinopse que aparece ao clicar em um card. Começa escondido. */
 .sinopse {
-    display: none; /* Começa invisível */
+    display: none; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -160,54 +175,53 @@
     padding: 30px;
     color: white;
     
-    /* Prepara para receber a imagem de fundo via JS */
+    /* Estas propriedades recebem a imagem de fundo do filme via JavaScript. */
     background-size: cover;
     background-position: center;
 }
 
 /* --- QUANDO O CARD É CLICADO (ATIVO) --- */
-/* Código gerado com auxílio de IA */
-
+/* Estilos aplicados à sinopse quando o card correspondente tem a classe "ativo". */
 .movie-card.ativo .sinopse {
-    display: flex;
+    display: flex; /* Torna a sinopse visível. */
     
-    /* Sai do card e vai para a tela inteira */
-    position: fixed; 
+    /* Transforma a sinopse em um pop-up que cobre a tela. */
+    position: fixed; /* Posicionamento em relação à janela do navegador. */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    transform: translate(-50%, -50%); /* Centraliza o pop-up perfeitamente. */
     
-    /* Tamanho do Card Expandido */
+    /* Define o tamanho do pop-up. */
     width: 90%;
     max-width: 400px; 
     height: 600px;
     border-radius: 20px;
     
-    z-index: 10000; /* Fica na frente de tudo */
-    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.8); /* Escurece o site atrás */
+    z-index: 10000; /* Garante que o pop-up fique na frente de todos os outros elementos. */
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.8); /* Cria um fundo preto semi-transparente que cobre toda a tela. */
     
-    animation: zoomIn 0.3s ease;
+    animation: zoomIn 0.3s ease; /* Aplica a animação de entrada. */
 }
 
-/* Cria a camada escura e borrada EM CIMA da imagem de fundo */
+/* Cria uma camada escura e desfocada SOBRE a imagem de fundo do pop-up, mas ATRÁS do texto. */
 .sinopse::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Escurece */
-    backdrop-filter: blur(8px);      /* Borra */
-    -webkit-backdrop-filter: blur(8px);
-    z-index: -1; /* Fica atrás do texto, mas na frente da imagem */
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Camada escura. */
+    backdrop-filter: blur(8px);      /* Efeito de desfoque no que está atrás. */
+    -webkit-backdrop-filter: blur(8px); /* Para compatibilidade com Safari. */
+    z-index: -1; /* Posiciona este pseudo-elemento atrás do conteúdo do pop-up. */
+    border-radius: 20px; /* Mantém as bordas arredondadas. */
 }
 
-/* Remove efeitos do card pai para não atrapalhar o pop-up */
+/* Remove o efeito de hover do card pai quando o pop-up está ativo para evitar conflitos visuais. */
 .movie-card.ativo {
     transform: none !important;
     z-index: 10000;
 }
 
-/* Títulos e Textos */
+/* Estiliza o título do filme dentro do pop-up. */
 .sinopse-titulo {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -217,6 +231,7 @@
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
+/* Estiliza o parágrafo que contém o texto da sinopse. */
 .sinopse p {
     font-size: 1.1rem;
     line-height: 1.5;
@@ -224,18 +239,19 @@
     font-weight: 500;
 }
 
+/* Estiliza o selo com o ano de lançamento do filme. */
 .ano-lancamento {
     color: #ffffff;
     font-weight: 700;
     font-size: 1.2rem;
     text-transform: uppercase;
-    background: #ECA72C; /* Um destaque amarelo*/
+    background: #ECA72C; /* Fundo amarelo de destaque. */
     padding: 5px 15px;
     border-radius: 20px;
-    color: #221E22;
+    color: #221E22; /* Cor do texto escura para contrastar com o fundo amarelo. */
 }
 
-/* Código gerado com auxílio de IA */
+/* Animação de entrada para o pop-up, fazendo-o crescer do centro. */
 @keyframes zoomIn {
     from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
     to { opacity: 1; transform: translate(-50%, -50%) scale(1); }

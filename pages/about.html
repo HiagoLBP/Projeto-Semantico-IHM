@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FS Streaming - Sobre Nós</title>
     
+    <!-- Bootstrap e dependências (CSS e JS) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
+    <!-- CSS personalizado e fontes -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/planes.css">
@@ -18,9 +20,10 @@
 </head>
 <body>
 
+<!-- Seção de navegação principal do site -->
 <nav class="navbar navbar-expand-lg"> 
   <div class="container-fluid">
-    <a class="navbar-brand" href="../index.html"><img src="../imgs/logo.png" alt=""></a>
+    <a class="navbar-brand" href="../index.html"><img src="../imgs/logo.png" alt="Logotipo FS Streaming"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,74 +42,89 @@
     </div>
   </div>
 </nav> 
+<!-- Fim da seção de navegação -->
 
+<!-- Seção de destaque da página "Sobre Nós" -->
 <section class="about-hero">
         <div class="about-hero-content container">
             <h1>ONDE SUA PRÓXIMA<br>MARATONA COMEÇA!</h1>
             <div class="yellow-line"></div>
         </div>
     </section>
+<!-- Fim da seção de destaque -->
 
-    <section class="about-content container">
-        
-        <div class="row align-items-center mb-5 feature-row">
-            <div class="col-md-6 text-content">
-                <h2>DESCUBRA OS MELHORES FILMES E SÉRIES</h2>
-                <p>EXPLORE NOSSO GUIA COMPLETO COM SINOPSES, TRAILERS E AVALIAÇÕES PARA AJUDAR VOCÊ A ESCOLHER O QUE ASSISTIR SEM PERDER TEMPO.</p>
-                <p>AQUI, CADA MARATONA SE TORNA AINDA MAIS ESPECIAL.</p>
+<!-- Seção de conteúdo principal com features e descrições -->
+<section class="about-content container">
+    
+    <!-- Feature 1: Descubra filmes e séries -->
+    <div class="row align-items-center mb-5 feature-row">
+        <div class="col-md-6 text-content">
+            <h2>DESCUBRA OS MELHORES FILMES E SÉRIES</h2>
+            <p>EXPLORE NOSSO GUIA COMPLETO COM SINOPSES, TRAILERS E AVALIAÇÕES PARA AJUDAR VOCÊ A ESCOLHER O QUE ASSISTIR SEM PERDER TEMPO.</p>
+            <p>AQUI, CADA MARATONA SE TORNA AINDA MAIS ESPECIAL.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="../icons/about/pipoca.png" alt="Ícone de um balde de pipoca" class="feature-img floating">
+        </div>
+    </div>
+
+    <!-- Feature 2: Acompanhe lançamentos -->
+    <div class="row align-items-center mb-5 feature-row flex-row-reverse">
+        <div class="col-md-6 text-content text-md-end">
+            <h2>ACOMPANHE OS ÚLTIMOS LANÇAMENTOS</h2>
+            <p>FIQUE ATUALIZADO COM AS ESTREIAS MAIS ESPERADAS DO CINEMA E DAS PLATAFORMAS DE STREAMING.</p>
+            <p>NUNCA MAIS PERCA AQUELE FILME OU SÉRIE QUE TODO MUNDO ESTÁ COMENTANDO!</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="../icons/about/movie.png" alt="Ícone de uma claquete de cinema" class="feature-img floating-delay">
+        </div>
+    </div>
+
+    <!-- Feature 3: Avaliações de filmes e séries -->
+    <div class="row align-items-center mb-5 feature-row">
+        <div class="col-md-6 text-content">
+            <h2>AVALIAÇÕES DE FILMES E SÉRIES</h2>
+            <p>VEJA CRÍTICAS, NOTAS E OPINIÕES DA NOSSA COMUNIDADE PARA TE AJUDAR A DECIDIR O QUE ASSISTIR EM SUA PRÓXIMA MARATONA.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="../icons/about/ghost.png" alt="Ícone do personagem Ghostface" class="feature-img floating">
+        </div>
+    </div>
+
+</section>
+<!-- Fim da seção de conteúdo -->
+
+<!-- Seção de benefícios -->
+<section class="benefits-section">
+    <div class="container text-center">
+        <h2 class="mb-5">BENEFÍCIOS DO SEU GUIA</h2>
+        <div class="yellow-line-center mb-5"></div>
+
+        <div class="row">
+            <!-- Benefício 1: Recomendações -->
+            <div class="col-md-4 mb-4">
+                <img src="../icons/about/Frame-1.svg" alt="Ícone de recomendação" class="benefit-icon mb-3">
+                <h4>RECOMENDAÇÕES PERSONALIZADAS</h4>
+                <p>RECEBA SUGESTÕES BASEADAS NO QUE VOCÊ GOSTA DE ASSISTIR.</p>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="../icons/about/pipoca.png" alt="Pipoca" class="feature-img floating">
+            <!-- Benefício 2: Conteúdo confiável -->
+            <div class="col-md-4 mb-4">
+                <img src="../icons/about/Frame-2.svg" alt="Ícone de conteúdo confiável" class="benefit-icon mb-3">
+                <h4>CONTEÚDO CONFIÁVEL</h4>
+                <p>INFORMAÇÕES DETALHADAS, SINOPSES, NOTAS E CRÍTICAS.</p>
+            </div>
+            <!-- Benefício 3: Comunidade -->
+            <div class="col-md-4 mb-4">
+                <img src="../icons/about/Frame.svg" alt="Ícone de comunidade de fãs" class="benefit-icon mb-3">
+                <h4>COMUNIDADE DE FÃS</h4>
+                <p>INTERAJA COM OUTROS APAIXONADOS POR FILMES E SÉRIES.</p>
             </div>
         </div>
+    </div>
+</section>
+<!-- Fim da seção de benefícios -->
 
-        <div class="row align-items-center mb-5 feature-row flex-row-reverse">
-            <div class="col-md-6 text-content text-md-end"> <h2>ACOMPANHE OS ÚLTIMOS LANÇAMENTOS</h2>
-                <p>FIQUE ATUALIZADO COM AS ESTREIAS MAIS ESPERADAS DO CINEMA E DAS PLATAFORMAS DE STREAMING.</p>
-                <p>NUNCA MAIS PERCA AQUELE FILME OU SÉRIE QUE TODO MUNDO ESTÁ COMENTANDO!</p>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="../icons/about/movie.png" alt="Claquete" class="feature-img floating-delay">
-            </div>
-        </div>
-
-        <div class="row align-items-center mb-5 feature-row">
-            <div class="col-md-6 text-content">
-                <h2>AVALIAÇÕES DE FILMES E SÉRIES</h2>
-                <p>VEJA CRÍTICAS, NOTAS E OPINIÕES DA NOSSA COMUNIDADE PARA TE AJUDAR A DECIDIR O QUE ASSISTIR EM SUA PRÓXIMA MARATONA.</p>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="../icons/about/ghost.png" alt="Ghostbusters" class="feature-img floating">
-            </div>
-        </div>
-
-    </section>
-
-    <section class="benefits-section">
-        <div class="container text-center">
-            <h2 class="mb-5">BENEFÍCIOS DO SEU GUIA</h2>
-            <div class="yellow-line-center mb-5"></div>
-
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="../icons/about/Frame-1.svg" alt="Recomendação" class="benefit-icon mb-3">
-                    <h4>RECOMENDAÇÕES PERSONALIZADAS</h4>
-                    <p>RECEBA SUGESTÕES BASEADAS NO QUE VOCÊ GOSTA DE ASSISTIR.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="../icons/about/Frame-2.svg" alt="Conteúdo" class="benefit-icon mb-3">
-                    <h4>CONTEÚDO CONFIÁVEL</h4>
-                    <p>INFORMAÇÕES DETALHADAS, SINOPSES, NOTAS E CRÍTICAS.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="../icons/about/Frame.svg" alt="Comunidade" class="benefit-icon mb-3">
-                    <h4>COMUNIDADE DE FÃS</h4>
-                    <p>INTERAJA COM OUTROS APAIXONADOS POR FILMES E SÉRIES.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<!-- Rodapé do site -->
 <footer class="site-footer">
     <div class="container">
         <div class="row">
@@ -155,6 +173,7 @@
         </div>
     </div>
 </footer>
+<!-- Fim do rodapé -->
 
 <script src="../script/index.js"></script>
 </body>

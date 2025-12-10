@@ -1,3 +1,4 @@
+/* Estilo para o título principal da seção, como "ESCOLHA SEU PLANO". */
 .section-title {
     font-weight: 800; 
     font-size: 3rem;
@@ -6,19 +7,22 @@
     text-transform: uppercase;
 }
 
+/* Classe de utilidade para aplicar a cor amarela padrão a textos. */
 .text-yellow {
     color: #ECA72C;
 }
 
 /* --- PÁGINA DE PLANOS --- */
 
+/* Container principal para toda a seção de planos. */
 .plans-section {
-    padding: 80px 0;
-    min-height: 100vh;
+    padding: 80px 0; /* Espaçamento interno superior e inferior. */
+    min-height: 100vh; /* Garante que a seção ocupe pelo menos a altura inteira da tela. */
 }
 
 /* --- ATUALIZAÇÃO DOS CARDS DE PLANOS --- */
 
+/* Estilo base para cada um dos cards de plano. */
 .plan-card {
     background-color: transparent;
     border: 1px solid #ECA72C;
@@ -26,115 +30,122 @@
     padding: 30px 20px;
     text-align: center;
     color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Animação suave para o hover. */
     position: relative;
     
-    /* MUDANÇAS PARA ALINHAMENTO PERFEITO: */
-    height: 100%; /* Força todos a terem a mesma altura da coluna */
+    /* As 3 propriedades abaixo garantem que todos os cards tenham a mesma altura
+       e que seus conteúdos (título, preço, lista, botão) se alinhem perfeitamente. */
+    height: 100%; 
     display: flex;
-    flex-direction: column; /* Organiza um item embaixo do outro */
+    flex-direction: column; 
 }
 
+/* Estiliza a imagem (ícone) no topo de cada card de plano. */
 .plan-img {
-    height: 180px; /* Mantido grande conforme solicitado */
+    height: 180px; 
     width: 100%;   
-    object-fit: contain; 
+    object-fit: contain; /* Garante que a imagem caiba inteira sem ser cortada ou distorcida. */
     margin-bottom: 20px;
 }
 
-/* Isso força o botão a ir sempre para o rodapé do card */
+/* Esta regra força o botão a ficar sempre na parte inferior do card,
+   independentemente da quantidade de texto na lista de benefícios. */
 .plan-card button {
     margin-top: auto; 
 }
 
 /* --- TIPOGRAFIA MELHORADA (PROFISSIONAL) --- */
 
+/* Estiliza o título de cada plano (ex: "PLANO BÁSICO"). */
 .plan-card h3 {
     font-size: 1.4rem;
-    font-weight: 800; /* Mais grosso para destaque */
+    font-weight: 800; 
     text-transform: uppercase;
     margin-bottom: 5px;
     color: #ffffff;
     letter-spacing: 1px;
 }
 
+/* Estiliza o preço do plano, dando grande destaque a ele. */
 .plan-card .price {
-    font-size: 2.5rem; /* Aumentei para dar destaque ao valor */
+    font-size: 2.5rem; 
     font-weight: 800;
     color: #ECA72C;
     margin-bottom: 25px;
-    text-shadow: 0 2px 10px rgba(236, 167, 44, 0.2); /* Brilho leve */
+    text-shadow: 0 2px 10px rgba(236, 167, 44, 0.2); /* Adiciona um brilho sutil ao redor do preço. */
 }
 
 /* --- LISTA DE BENEFÍCIOS (VISUAL LIMPO) --- */
 
+/* Estiliza a lista <ul> que contém os benefícios do plano. */
 .plan-features {
-    list-style: none;
+    list-style: none; /* Remove os marcadores de bolinha padrão da lista. */
     padding: 20px 10px;
     margin-bottom: 20px;
-    
-    /* MUDANÇA PRINCIPAL: Alinhamento à Esquerda */
-    text-align: left; 
-    
-    /* Linha fina separando o preço da lista */
-    border-top: 1px solid rgba(255,255,255,0.1); 
+    text-align: left; /* Alinha o texto e os ícones da lista à esquerda. */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Linha fina que separa o preço da lista. */
 }
 
+/* Estiliza cada item <li> da lista de benefícios. */
 .plan-features li {
     margin-bottom: 12px;
     font-size: 0.95rem;
-    color: #e0e0e0; /* Branco gelo para não cansar a vista */
+    color: #e0e0e0;
     
-    /* Alinha o ícone (check) com o texto perfeitamente */
+    /* Alinha o ícone (check/x) com o texto ao lado. */
     display: flex; 
     align-items: center;
-    gap: 10px; 
+    gap: 10px; /* Espaço entre o ícone e o texto. */
 }
 
-/* Removi o código antigo do "content: '•'" pois agora usamos ícones no HTML */
-
-/* Estilo para itens desativados (riscados ou cinzas) */
+/* Estilo para os benefícios que NÃO estão incluídos no plano. */
 .plan-features li.disabled {
-    color: #666;
-    text-decoration: line-through; 
+    color: #666; /* Cor cinza para indicar que está desativado. */
+    text-decoration: line-through; /* Tacha o texto. */
 }
 
-/* Destaque para palavras em negrito dentro da lista */
+/* Estilo para dar destaque a palavras em negrito (<strong>) dentro da lista. */
 .plan-features li strong {
     color: white;
     font-weight: 700;
 }
 
 /* --- ESTILO DO CARD "MAIS VENDIDO" (O do meio) --- */
+
+/* Estilo adicional para o card em destaque. */
 .plan-card.featured {
     border: 2px solid #ECA72C; 
-    transform: scale(1.05); 
-    background-color: #1a1a1a; 
-    margin-top: -20px; 
+    transform: scale(1.05); /* Deixa o card um pouco maior que os outros. */
+    background-color: #1a1a1a; /* Fundo um pouco diferente para se destacar. */
+    margin-top: -20px; /* Sobe um pouco o card para criar sobreposição. */
 }
 
-/* A Faixa "MAIS VENDIDO" */
+/* A Faixa/Selo "MAIS VENDIDO" no topo do card em destaque. */
 .badge-top {
     position: absolute;
     top: -20px; 
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centraliza a faixa horizontalmente. */
     background-color: #ECA72C;
-    color: #221E22;
+    color: #221E22; /* Cor de texto escura para contrastar com o fundo amarelo. */
     padding: 10px 30px;
     font-weight: 800;
     text-transform: uppercase;
+    /* Cria o formato de faixa com as pontas cortadas. */
     clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); 
     width: 80%;
 }
 
 /* Responsividade para celular */
 @media (max-width: 768px) {
+    /* Em telas menores, o card em destaque não fica maior, para não quebrar o layout.
+       Ele ganha margens para se separar dos outros cards que agora ficam empilhados. */
     .plan-card.featured {
         transform: none; 
         margin-top: 30px;
         margin-bottom: 30px;
     }
+    /* Diminui a largura da faixa em telas menores. */
     .badge-top {
         width: 60%;
     }

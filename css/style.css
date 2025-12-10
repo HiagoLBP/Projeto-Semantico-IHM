@@ -1,23 +1,20 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
+/* Garante que a rolagem da página seja suave ao clicar em links de âncora (#). */
 html {
     scroll-behavior: smooth;
 }
 
+/* Define a fonte padrão, a cor de fundo e a cor do texto para todo o site. */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #121212;
     color: #ffffff;
 }
 
-
-/* Código gerado com auxílio de IA */
 /* --- NAVBAR (Versão Desktop - Telas Grandes) --- */
+/* Aplica estas regras apenas em telas com 992px de largura ou mais. */
 @media (min-width: 992px) { 
-    .navbar {
-        position: relative;
-    }
-
-    /* Centraliza o menu perfeitamente no meio da tela */
+    /* Centraliza a lista de links de navegação no meio da barra. */
     .navbar-collapse .navbar-nav {
         position: absolute;
         left: 50%;
@@ -26,6 +23,7 @@ body {
 }
 
 /* --- ESTILOS PADRÃO DA NAVBAR --- */
+/* Estilização da barra de navegação principal. */
 .navbar {
     background-color: #221E22; 
     padding-top: 15px;    
@@ -34,70 +32,66 @@ body {
     border-bottom: 2px solid #ECA72C;
 }
 
+/* Define a altura do logo na barra de navegação. */
 .navbar img {
     width: auto;
-    height: 70px; /* Altura padrão para PC */
-    transition: height 0.3s ease;
+    height: 70px; /* Altura padrão para PC. */
+    transition: height 0.3s ease; /* Animação suave ao redimensionar a tela. */
 }
 
+/* Define o espaçamento lateral do conteúdo dentro da navbar. */
 .container-fluid {
     padding-left: 50px;
     padding-right: 50px;
     background-color: #221E22;
 }
 
-.navbar .navbar-expand-lg{
-    border-radius: 50%;
-    border-color: white;
-}
-
-/* Links do Menu */
+/* Estiliza os links do menu (Início, Sobre, etc.). */
 .navbar-nav .nav-link {
     color: #ffffff !important;
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 8px 16px !important;
-    margin: 0 5px;
+    margin: 0 5px; /* Espaço entre os links. */
 }
 
+/* Efeito ao passar o mouse sobre os links do menu. */
 .navbar-nav .nav-link:hover {
     background-color: #ECA72C !important;
     color: #221E22 !important;
     border-radius: 20px;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(236, 167, 44, 0.3);
+    transform: scale(1.05); /* Efeito de zoom. */
+    box-shadow: 0 4px 10px rgba(236, 167, 44, 0.3); /* Sombra amarela. */
 }
 
-
-/*Código abaixo gerado com auxílio de IA */
-
-/* --- AJUSTES MOBILE (Celular/Tablet) - NOVO! --- */
+/* --- AJUSTES MOBILE (Celular/Tablet) --- */
+/* Aplica estas regras apenas em telas com largura máxima de 991px. */
 @media (max-width: 991px) {
     
-    /* 1. Tira o padding gigante que espremia o conteúdo */
+    /* Reduz o espaçamento lateral em telas pequenas para aproveitar melhor o espaço. */
     .container-fluid {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
 
-    /* 2. Diminui a logo para caber no celular */
+    /* Diminui a altura do logo em telas menores. */
     .navbar img {
-        height: 45px; /* Reduzido */
+        height: 45px;
     }
 
-    /* 3. Estiliza o botão Hambúrguer */
+    /* Estiliza o botão "hambúrguer" que abre o menu mobile. */
     .navbar-toggler {
         border-color: #ECA72C;
         margin-right: 0;
     }
     
-    /* Pinta os tracinhos do menu de amarelo */
+    /* Pinta os três traços do ícone "hambúrguer" de amarelo usando um SVG embutido. */
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(236, 167, 44, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
 
-    /* 4. Ajusta o menu quando ele ABRE */
+    /* Estiliza a área que aparece quando o menu mobile é aberto. */
     .navbar-collapse {
         background-color: #221E22;
         padding: 20px 0;
@@ -107,7 +101,7 @@ body {
         z-index: 1000;
     }
 
-    /* Reseta a posição absoluta do desktop */
+    /* No mobile, reseta o posicionamento dos links para que fiquem um abaixo do outro. */
     .navbar-collapse .navbar-nav {
         position: relative;
         left: 0;
@@ -116,15 +110,15 @@ body {
         margin-bottom: 20px;
     }
 
-    /* Centraliza os botões de ação */
+    /* Centraliza os botões (ex: Login) dentro do menu mobile aberto. */
     .navbar-collapse form {
         justify-content: center;
     }
 }
-/* ^^^^^ Código acima gerado com auxílio de IA ^^^^^ */
 
 
 /* --- BOTÕES --- */
+/* Classe base para os botões customizados do site. */
 .btn-custom {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -138,26 +132,30 @@ body {
     justify-content: center;
 }
 
+/* Estilo para o botão primário (amarelo, preenchido). */
 .btn-warning {
     background-color: #ECA72C;
     border-color: #ECA72C;
     color: #221E22;
 }
 
+/* Efeito ao passar o mouse sobre o botão primário. */
 .btn-warning:hover {
     background-color: #F7C15E;
     border-color: #F7C15E;
     color: #221E22;
     box-shadow: 0 4px 15px rgba(236, 167, 44, 0.4);
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Efeito de "levantar". */
 }
 
+/* Estilo para o botão secundário (transparente com borda). */
 .btn-outline-secondary {
     background-color: transparent;
     color: #ffffff;
     border-color: #ECA72C;
 }
 
+/* Efeito ao passar o mouse sobre o botão secundário. */
 .btn-outline-secondary:hover {
     background-color: #ECA72C;
     color: #221E22;
@@ -166,6 +164,7 @@ body {
 }
 
 /* --- FOOTER --- */
+/* Estilo geral para o container do rodapé. */
 .site-footer {
     background-color: #0d0d0d;
     padding-top: 60px;
@@ -174,11 +173,13 @@ body {
     font-size: 15px;
 }
 
+/* Estilo para o logo no rodapé. */
 .footer-logo {
     height: 60px;
     width: auto;
 }
 
+/* Estilo para os títulos das seções do rodapé (ex: "Navegação"). */
 .footer-title {
     color: #ECA72C;
     font-weight: 700;
@@ -186,33 +187,38 @@ body {
     font-size: 18px;
 }
 
+/* Estilo para cada item da lista de links no rodapé. */
 .footer-links li {
     margin-bottom: 12px;
 }
 
+/* Estilo para os links de texto do rodapé. */
 .footer-links a {
     color: #b3b3b3;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
+/* Efeito ao passar o mouse sobre um link do rodapé. */
 .footer-links a:hover {
     color: #ECA72C;
-    padding-left: 5px;
+    padding-left: 5px; /* Empurra o texto levemente para a direita. */
 }
 
-/* Ícones sociais */
+/* Ícones das redes sociais (Instagram, etc.). */
 .social-icons img {
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease;
 }
 
+/* Efeito de zoom ao passar o mouse sobre um ícone de rede social. */
 .social-icons a:hover img {
     transform: scale(1.2);
 }
 
 /* --- VIDEO BACKGROUND & HERO SECTION --- */
+/* Container da seção principal da página inicial, que contém o vídeo de fundo. */
 .hero-section {
     position: relative;
     width: 100%;
@@ -220,17 +226,18 @@ body {
     display: flex;
     align-items: center;     
     justify-content: center; 
-    overflow: hidden;       
+    overflow: hidden; /* Garante que o vídeo não ultrapasse as bordas. */
     border-bottom: 2px solid #ECA72C; 
 }
 
-/* Ajuste do Hero para celular */
+/* Ajusta a altura da seção hero em telas menores. */
 @media (max-width: 768px) {
     .hero-section {
         height: 400px;
     }
 }
 
+/* Container do vídeo, posicionado para ficar atrás do conteúdo. */
 .video-background {
     position: absolute;
     top: 0;
@@ -240,12 +247,14 @@ body {
     z-index: 1; 
 }
 
+/* Faz o vídeo cobrir toda a área da seção hero sem distorcer. */
 .video-background video {
     width: 100%;
     height: 100%;
     object-fit: cover; 
 }
 
+/* Camada escura semi-transparente que fica sobre o vídeo para dar legibilidade ao texto. */
 .overlay {
     position: absolute;
     top: 0;
@@ -255,15 +264,16 @@ body {
     background: rgba(0, 0, 0, 0.6);
 }
 
-/* O Texto Central */
+/* O conteúdo de texto que fica centralizado sobre o vídeo. */
 .hero-content {
     position: relative;
-    z-index: 2; 
+    z-index: 2; /* Garante que o texto fique na frente do vídeo e da camada escura. */
     padding: 20px;
     max-width: 900px; 
     text-align: center;
 }
 
+/* Estilo do título principal da seção hero. */
 .hero-title {
     font-family: 'Inter', sans-serif; 
     font-weight: 800; 
@@ -271,9 +281,10 @@ body {
     color: #ECA72C;
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Sombra para destacar. */
 }
 
+/* Estilo do subtítulo da seção hero. */
 .hero-subtitle {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -284,24 +295,16 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
-/* No celular, diminui a fonte do Hero */
+/* Diminui o tamanho das fontes do hero em telas menores. */
 @media (max-width: 768px) {
     .hero-title { font-size: 1.8rem; }
     .hero-subtitle { font-size: 0.9rem; }
 }
 
-
-
-/* Animação do Texto */
-.hero-title, 
-.hero-subtitle {
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Animação de fade-out para o texto do hero (controlada via JS). */
+/* Quando a classe 'fade-out' é adicionada ao .hero-content, o texto desaparece suavemente. */
 .hero-content.fade-out .hero-title,
 .hero-content.fade-out .hero-subtitle {
     opacity: 0;
-    transform: translateY(20px); 
+    transform: translateY(20px); /* Desliza para baixo ao desaparecer. */
 }

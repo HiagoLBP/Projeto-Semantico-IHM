@@ -1,41 +1,43 @@
-// Código gerado com auxílio de IA 
-
-
+// Seleciona todos os elementos com a classe 'movie-card'
 const cards = document.querySelectorAll('.movie-card');
 
-// 1. Lógica para ABRIR (Clique no Card)
+// --- LÓGICA PARA ABRIR O CARD ---
+// Adiciona um evento de clique a cada um dos cards de filme/série.
 cards.forEach(card => {
     card.addEventListener('click', (e) => {
-        // O SEGREDO: Impede que o clique no card chegue até o documento
-        // Se não tiver isso, o código de fechar lá embaixo roda imediatamente
+        // Impede que o clique se propague para outros elementos,
+        // evitando que o evento de fechar seja acionado acidentalmente.
         e.stopPropagation();
 
-        // Se o card já estiver aberto (ativo), apenas fecha ele e para por aqui
+        // Se o card clicado já estiver aberto (com a classe 'ativo'),
+        // ele é fechado e a função para por aqui.
         if (card.classList.contains('ativo')) {
             card.classList.remove('ativo');
             return;
         }
 
-        // Se não estiver aberto:
-        // Fecha qualquer outro card que esteja aberto antes de abrir este
+        // Antes de abrir um novo card, fecha qualquer outro que esteja aberto.
+        // Isso garante que apenas um card fique aberto por vez.
         cards.forEach(c => c.classList.remove('ativo'));
 
-        // Pega a imagem e joga no fundo da sinopse
+        // Define a imagem do card como fundo da sinopse para um efeito visual.
         const img = card.querySelector('img').src;
         const sinopse = card.querySelector('.sinopse');
         sinopse.style.backgroundImage = `url('${img}')`;
 
-        // Abre o card clicado
+        // Adiciona a classe 'ativo' para expandir e mostrar os detalhes do card.
         card.classList.add('ativo');
     });
 });
 
-// 2. Lógica para FECHAR (Clique em qualquer lugar da tela)
+// --- LÓGICA PARA FECHAR O CARD ---
+// Adiciona um evento de clique no documento inteiro.
+// Isso permite fechar o card ao clicar em qualquer lugar fora dele.
 document.addEventListener('click', () => {
-    // Procura se tem algum card aberto
+    // Procura por um card que esteja atualmente aberto (com a classe 'ativo').
     const cardAtivo = document.querySelector('.movie-card.ativo');
     
-    // Se tiver, remove a classe 'ativo' (fecha)
+    // Se um card aberto for encontrado, a classe 'ativo' é removida para fechá-lo.
     if (cardAtivo) {
         cardAtivo.classList.remove('ativo');
     }

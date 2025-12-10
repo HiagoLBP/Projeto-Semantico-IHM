@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FS Streaming - Início</title>
     
+    <!--- Bootstrap e dependências (CSS e JS) --->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!--- CSS personalizado e fontes --->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/carrosel.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +18,10 @@
 </head>
 <body>
 
+<!-- Seção de navegação principal do site -->
 <nav class="navbar navbar-expand-lg navbar-dark"> 
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt=""></a>
+    <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt="Logotipo FS Streaming"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,8 +39,10 @@
     </form>
     </div>
   </div>
-</nav>            
+</nav>
+<!-- Fim da seção de navegação -->            
 
+<!-- Seção principal de destaque com vídeo de fundo -->
 <section class="hero-section">
     
     <div class="video-background">
@@ -55,8 +61,9 @@
     </div>
 
 </section>
+<!-- Fim da seção de destaque -->
 
-<!-- SEÇÃO DE FILMES --> 
+<!-- Seção de listagem de filmes em formato de carrossel -->
 <section class="container my-5" id="filmes">
     <h2 class="section-title text-center mb-5">
         <span class="text-yellow">FILMES</span>
@@ -70,8 +77,9 @@
 
         <div class="movie-grid">
             
+            <!-- Card de filme individual -->
             <div class="movie-card">
-                <img src="imgs/FILMES/Lightyear.jpg" alt="Filme">
+                <img src="imgs/FILMES/Lightyear.jpg" alt="Filme Lightyear">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Lightyear</h3>
@@ -86,9 +94,10 @@
                         <strong class="ano-lancamento">LANÇAMENTO: 2022</strong>
                     </div>
             </div>
+            <!-- Fim do card de filme -->
 
             <div class="movie-card active-card">
-                <img src="imgs/FILMES/ETERNOS.jpg" alt="Filme">
+                <img src="imgs/FILMES/ETERNOS.jpg" alt="Filme Eternos">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Eternos</h3>
@@ -105,7 +114,7 @@
             </div>
 
             <div class="movie-card">
-                <img src="imgs/FILMES/DUNE.jpg" alt="Filme">
+                <img src="imgs/FILMES/DUNE.jpg" alt="Filme Duna">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Duna</h3>
@@ -122,7 +131,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/FILMES/TENET.png" alt="Filme">
+                <img src="imgs/FILMES/TENET.png" alt="Filme Tenet">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Tenet</h3>
@@ -139,7 +148,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/FILMES/INTERESTELAR.jpg" alt="Filme">
+                <img src="imgs/FILMES/INTERESTELAR.jpg" alt="Filme Interestelar">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Interestelar</h3>
@@ -156,7 +165,7 @@
             </div>
              
              <div class="movie-card">
-                <img src="imgs/FILMES/MINECRAFT.jpg" alt="Filme">
+                <img src="imgs/FILMES/MINECRAFT.jpg" alt="Filme Minecraft">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>MINECRAFT</h3>
                         <span>Aventura</span>
@@ -171,7 +180,7 @@
                     </div>                
             </div>
              <div class="movie-card">
-                <img src="imgs/FILMES/PREMONIÇÃO.jpg" alt="Filme">
+                <img src="imgs/FILMES/PREMONIÇÃO.jpg" alt="Filme Premonição">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Premonição</h3>
                         <span>Terror</span>
@@ -186,7 +195,7 @@
                     </div>                
             </div>
              <div class="movie-card">
-                <img src="imgs/FILMES/QUARTETO.jpg" alt="Filme">
+                <img src="imgs/FILMES/QUARTETO.jpg" alt="Filme Quarteto Fantástico">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Quarteto Fantástico</h3>
                         <span>Ação</span>
@@ -202,7 +211,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/FILMES/F1.jpg" alt="Filme">
+                <img src="imgs/FILMES/F1.jpg" alt="Filme F1">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>F1</h3>
                         <span>Ação</span>
@@ -223,8 +232,9 @@
 
     </div> 
 </section>
+<!-- Fim da seção de filmes -->
 
-<!-- SEÇÃO DE SÉRIES --> 
+<!-- Seção de listagem de séries em formato de carrossel -->
 <section class="container my-5" id="series">
     <h2 class="section-title text-center mb-5">
         <span class="text-yellow">SÉRIES</span>
@@ -238,8 +248,9 @@
 
         <div class="movie-grid">
             
+            <!-- Card de série individual -->
             <div class="movie-card">
-                <img src="imgs/Series/Marvel.jpg" alt="Filme">
+                <img src="imgs/Series/Marvel.jpg" alt="Série Marvel Zombies">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Marvel Zombies</h3>
@@ -254,9 +265,10 @@
                         <strong class="ano-lancamento">LANÇAMENTO: 2025</strong>
                     </div>
             </div>
+            <!-- Fim do card de série -->
 
             <div class="movie-card active-card">
-                <img src="imgs/Series/Alien.jpg" alt="Filme">
+                <img src="imgs/Series/Alien.jpg" alt="Série Alien Earth">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Alien Earth</h3>
@@ -273,7 +285,7 @@
             </div>
 
             <div class="movie-card">
-                <img src="imgs/Series/Wanda.jpg" alt="Filme">
+                <img src="imgs/Series/Wanda.jpg" alt="Série Wandinha">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Wandinha</h3>
@@ -290,7 +302,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/Series/Tusa.jpg" alt="Filme">
+                <img src="imgs/Series/Tusa.jpg" alt="Série Tulsa King">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Tulsa King</h3>
@@ -307,7 +319,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/Series/Pacificador.jpg" alt="Filme">
+                <img src="imgs/Series/Pacificador.jpg" alt="Série Pacificador">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Pacificador</h3>
@@ -324,7 +336,7 @@
             </div>
              
              <div class="movie-card">
-                <img src="imgs/Series/Dan.jpg" alt="Filme">
+                <img src="imgs/Series/Dan.jpg" alt="Série Dan Dan Dan">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Dan Dan Dan</h3>
                         <span>Ficção Científica</span>
@@ -339,7 +351,7 @@
                     </div>
             </div>
              <div class="movie-card">
-                <img src="imgs/Series/GoT.jpg" alt="Filme">
+                <img src="imgs/Series/GoT.jpg" alt="Série Game of Thrones">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Game of Thrones</h3>
                         <span>Drama</span>
@@ -354,7 +366,7 @@
                     </div>
             </div>
              <div class="movie-card">
-                <img src="imgs/Series/Stranger.jpg" alt="Filme">
+                <img src="imgs/Series/Stranger.jpg" alt="Série Stranger Things">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Stranger Things</h3>
                         <span>Terror</span>
@@ -370,7 +382,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/Series/Round6.jpg" alt="Filme">
+                <img src="imgs/Series/Round6.jpg" alt="Série Round 6">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Round 6</h3>
                         <span>Ficção Científica</span>
@@ -391,9 +403,9 @@
 
     </div> 
 </section>
+<!-- Fim da seção de séries -->
 
-<!-- SEÇÃO DE LANÇAMENTOS --> 
-
+<!-- Seção de próximos lançamentos -->
 <section class="container my-5" id="lançamentos">
     <h2 class="section-title text-center mb-5">
         <span class="text-white">PRÓXIMOS</span>
@@ -408,8 +420,9 @@
 
         <div class="movie-grid">
             
+            <!-- Card de lançamento individual -->
             <div class="movie-card">
-                <img src="imgs/lancamentos/Avatar.png" alt="Filme">
+                <img src="imgs/lancamentos/Avatar.png" alt="Lançamento Avatar 3">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Avatar 3</h3>
@@ -424,9 +437,10 @@
                         <strong class="ano-lancamento">LANÇAMENTO: 2025</strong>
                     </div>                
             </div>
+            <!-- Fim do card de lançamento -->
 
             <div class="movie-card active-card">
-                <img src="imgs/lancamentos/Telefone.png" alt="Filme">
+                <img src="imgs/lancamentos/Telefone.png" alt="Lançamento Telefone Preto 2">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Telefone Preto 2</h3>
@@ -443,7 +457,7 @@
             </div>
 
             <div class="movie-card">
-                <img src="imgs/lancamentos/Anaconda.png" alt="Filme">
+                <img src="imgs/lancamentos/Anaconda.png" alt="Lançamento Anaconda">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Anaconda</h3>
@@ -460,7 +474,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/lancamentos/Tron.png" alt="Filme">
+                <img src="imgs/lancamentos/Tron.png" alt="Lançamento TRON: Ares">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>TRON: Ares</h3>
@@ -477,7 +491,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/lancamentos/CoraçãoLutador.png" alt="Filme">
+                <img src="imgs/lancamentos/CoraçãoLutador.png" alt="Lançamento Coração de Lutador">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h3>Coração de Lutador</h3>
@@ -494,7 +508,7 @@
             </div>
              
              <div class="movie-card">
-                <img src="imgs/lancamentos/Predator.png" alt="Filme">
+                <img src="imgs/lancamentos/Predator.png" alt="Lançamento Predador">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Predador</h3>
                         <span>Ficção Científica</span>
@@ -509,7 +523,7 @@
                     </div> 
             </div>
              <div class="movie-card">
-                <img src="imgs/lancamentos/It.png" alt="Filme">
+                <img src="imgs/lancamentos/It.png" alt="Lançamento IT: Bem-Vindos a Derry">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>IT: Bem-Vindos a Derry</h3>
                         <span>Terror</span>
@@ -524,7 +538,7 @@
                     </div> 
             </div>
              <div class="movie-card">
-                <img src="imgs/lancamentos/Stranger5.png" alt="Filme">
+                <img src="imgs/lancamentos/Stranger5.png" alt="Lançamento Stranger Things 5">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>Stranger Things 5</h3>
                         <span>Terror</span>
@@ -540,7 +554,7 @@
             </div>
 
              <div class="movie-card">
-                <img src="imgs/lancamentos/Urso.png" alt="Filme">
+                <img src="imgs/lancamentos/Urso.png" alt="Lançamento O Urso">
                 <div class="movie-overlay">
                     <div class="movie-info"><h3>O Urso</h3>
                         <span>Drama</span>
@@ -561,12 +575,15 @@
 
     </div> 
 </section>
+<!-- Fim da seção de lançamentos -->
 
 
 
+<!-- Rodapé do site -->
 <footer class="site-footer">
     <div class="container">
         <div class="row">
+            <!-- Seção de marca e redes sociais -->
             <div class="col-lg-4 col-md-6 mb-4 d-flex flex-column align-items-center text-center">
                 <div class="footer-brand mb-3">
                     <img src="imgs/logo.png" alt="FS Streaming" class="footer-logo img-fluid">
@@ -579,6 +596,7 @@
                 </div>
             </div>
 
+            <!-- Links de navegação do rodapé -->
             <div class="col-lg-3 col-md-6 mb-4" id="contato">
                 <h5 class="footer-title">Conheça-nos</h5>
                 <ul class="list-unstyled footer-links">
@@ -605,6 +623,7 @@
             </div>
         </div>
         
+        <!-- Direitos autorais -->
         <div class="row mt-4 pt-3 border-top border-secondary">
             <div class="col text-center text-white-50">
                 <small>&copy; 2025 FS Streaming. Todos os direitos reservados.</small>
@@ -612,7 +631,9 @@
         </div>
     </div>
 </footer>
+<!-- Fim do rodapé -->
 
+<!-- Scripts JavaScript para funcionalidades da página -->
 <script src="script/index.js"></script>
 <script src="script/cards.js"></script>
 

@@ -1,32 +1,37 @@
 /* --- TELA DE LOGIN --- */
 
+/* Define o container principal que ocupa toda a tela, com fundo escuro. */
 .login-bg {
-    background-color: #121212; /* Fundo escuro */
-    height: 100vh; /* Ocupa a tela toda */
+    background-color: #121212; /* Fundo escuro. */
+    height: 100vh; /* Ocupa 100% da altura da tela. */
     width: 100%;
-    position: relative;
-    overflow: hidden; /* Corta o que sobrar das ondas */
+    position: relative; /* Base para o posicionamento absoluto das ondas. */
+    overflow: hidden; /* Esconde as partes das ondas que saem da tela. */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo verticalmente. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente. */
 }
 
 /* ONDAS AMARELAS (Feitas com CSS puro) */
+/* Classe base para as formas decorativas (manchas/ondas). */
 .blob {
     position: absolute;
     background-color: #ECA72C;
-    z-index: 1; /* Fica atrás do formulário */
+    z-index: 1; /* Ficam atrás do formulário de login. */
 }
 
+/* A onda que fica no canto superior direito. */
 .blob-top {
     top: -100px;
     right: -100px;
     width: 600px;
     height: 600px;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 20%; /* Deforma o círculo */
-    transform: rotate(135deg);
+    /* O border-radius com 8 valores deforma o círculo para criar uma onda irregular. */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 20%; 
+    transform: rotate(135deg); /* Gira a forma para um ângulo mais interessante. */
 }
 
+/* A onda que fica no canto inferior esquerdo. */
 .blob-bottom {
     bottom: -150px;
     left: -150px;
@@ -37,56 +42,62 @@
 }
 
 /* CONTEÚDO CENTRAL */
+/* Container para o formulário de login, centralizado na tela. */
 .login-content {
     position: relative;
-    z-index: 2; /* Fica NA FRENTE das ondas */
+    z-index: 2; /* Garante que o formulário fique na frente das ondas. */
     width: 100%;
-    max-width: 400px; /* Largura máxima do formulário */
+    max-width: 400px; /* Largura máxima do formulário. */
     padding: 20px;
 }
 
+/* Estiliza o logo que aparece acima do formulário. */
 .login-logo {
     height: 100px;
     width: auto;
+    /* Adiciona uma sombra sutil para destacar o logo. */
     filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
 }
 
 /* CAMPOS DE TEXTO TRANSPARENTES */
+/* Estiliza o container do ícone (envelope, cadeado) ao lado do campo de texto. */
 .custom-input .input-group-text {
     background: transparent;
     border: 1px solid white;
-    border-right: none; /* Remove a borda entre o ícone e o texto */
+    border-right: none; /* Remove a borda direita para unificar com o campo de texto. */
     color: white;
 }
 
+/* Estiliza o campo de texto (input). */
 .custom-input .form-control {
     background: transparent;
     border: 1px solid white;
-    border-left: none; /* Remove a borda entre o ícone e o texto */
-    color: white;
+    border-left: none; /* Remove a borda esquerda para unificar com o ícone. */
+    color: white; /* Cor do texto digitado. */
 }
 
-/* Cor do texto placeholder (Username/Password) */
+/* Estiliza o texto de placeholder (ex: "Username", "Password"). */
 .custom-input .form-control::placeholder {
     color: #ccc;
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
 
-/* Remove o brilho azul padrão do navegador ao clicar */
+/* Estiliza o campo de texto quando está em foco (clicado). */
 .custom-input .form-control:focus {
     background: transparent;
-    box-shadow: none;
-    border-color: #ECA72C;
+    box-shadow: none; /* Remove o brilho azul padrão do navegador. */
+    border-color: #ECA72C; /* Muda a cor da borda para amarelo. */
     color: white;
 }
+/* Muda a cor da borda do ícone para amarelo quando o campo de texto ao lado está focado. */
 .custom-input .form-control:focus + .input-group-text, 
 .custom-input .form-control:focus ~ .input-group-text { 
-    /* Pinta a borda do icone quando clica no input */
     border-color: #ECA72C;
 }
 
 /* BOTÃO DE LOGIN */
+/* Estilo principal do botão "ENTRAR". */
 .btn-login {
     font-weight: 700;
     font-size: 1.2rem;
@@ -95,31 +106,34 @@
     background-color: #ECA72C;
     border: none;
     letter-spacing: 1px;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* Animação suave para o hover. */
 }
 
+/* Efeito ao passar o mouse por cima do botão de login. */
 .btn-login:hover {
-    background-color: #ffbd44;
+    background-color: #ffbd44; /* Cor amarela um pouco mais clara. */
     color: white;
-    transform: scale(1.02);
+    transform: scale(1.02); /* Aumenta levemente o tamanho do botão. */
 }
 
-/* Link Esqueci a senha */
+/* Link "Esqueci a senha". */
 .forgot-link {
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.8; /* Deixa o link um pouco transparente. */
 }
 
+/* Efeito ao passar o mouse por cima do link "Esqueci a senha". */
 .forgot-link:hover {
     color: #ECA72C;
     text-decoration: underline;
-    opacity: 1;
+    opacity: 1; /* Remove a transparência. */
 }
 
-/* Responsividade */
+/* Responsividade: Ajustes para telas menores. */
 @media (max-width: 768px) {
+    /* Diminui o tamanho das ondas decorativas em telas de celular. */
     .blob-top { width: 300px; height: 300px; }
     .blob-bottom { width: 350px; height: 350px; }
 }
